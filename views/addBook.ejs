@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./stylesheets/util.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
+  <title>Home</title>
+</head>
+<body>
+  <div class="container">
+      <!-- <div class="container-contact100"> -->
+          <!-- <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div> -->
+      
+          <!-- <button class="contact100-btn-show">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          </button> -->
+      
+          <div class="wrap-contact100">
+            <!-- <button class="contact100-btn-hide">
+              <i class="fa fa-close" aria-hidden="true"></i>
+            </button> -->
+      
+            <form action="/api/addBook" method="POST" class="contact100-form validate-form">
+              <span class="contact100-form-title">
+                Add Book
+              </span>
+      
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Book Title is required">
+                <span class="label-input100">Title</span>
+                <input class="input100" type="text" name="title" placeholder="Enter Book Title">
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Author name is required">
+                  <span class="label-input100">Author</span>
+                  <input class="input100" type="text" name="author" placeholder="Enter Author name">
+                  <span class="focus-input100"></span>
+              </div>
+      
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Publish Year is required">
+                <span class="label-input100">Publish Year</span>
+                <input class="input100" type="text" name="publishYear" placeholder="Enter Publish Year">
+                <span class="focus-input100"></span>
+              </div>
+      
+              <div class="wrap-input100 validate-input" data-validate = "Book Description required">
+                <span class="label-input100">Description</span>
+                <textarea class="input100" name="description" placeholder="Book Description here..."></textarea>
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Pages is required">
+                <span class="label-input100">Pages</span>
+                <input class="input100" type="text" name="pages" placeholder="Enter Pages">
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Rating is required">
+                <span class="label-input100">Rating</span>
+                <input class="input100" type="text" name="rating" placeholder="Enter Rating">
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Genres is required">
+                <span class="label-input100">Genres</span>
+                <input class="input100" type="text" name="genres" placeholder="Enter Genres">
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Publisher is required">
+                <span class="label-input100">Publisher</span>
+                <input class="input100" type="text" name="publisher" placeholder="Enter Publisher">
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "ISBN is required">
+                <span class="label-input100">ISBN</span>
+                <input class="input100" type="text" name="isbn" placeholder="Enter ISBN">
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Cover URL is required">
+                <span class="label-input100">Cover URL</span>
+                <input class="input100" type="text" name="coverUrl" placeholder="Enter Cover URL">
+                <span class="focus-input100"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input" data-validate = "About author required">
+                <span class="label-input100">About Author</span>
+                <textarea class="input100" name="aboutAuthor" placeholder="About Author here..."></textarea>
+                <span class="focus-input100"></span>
+              </div>
+      
+              <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn">
+                  <span>
+                    Submit
+                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+            </form>
+
+
+      
+            <!-- <span class="contact100-more">
+              For any question contact our 24/7 call center: <span class="contact100-more-highlight">+001 345 6889</span>
+            </span> -->
+          </div>
+        <!-- </div> -->
+  </div> 
+  
+  
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<!-- <script src="vendor/bootstrap/js/popper.js"></script> -->
+	<!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+	<script src="js/map-custom.js"></script> -->
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> -->
+<!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script> -->
+
+
+</body>
+</html>
