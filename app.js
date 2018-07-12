@@ -5,13 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var config = require('./config/config');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+// console.log(process.env.NODE_ENV);
 
-mongoose.connect('mongodb://mandisushil306:mandisushil306@ds125241.mlab.com:25241/node-restful-api');
+mongoose.connect(`mongodb://${config.dbUser}:${config.dbPass}@ds125241.mlab.com:25241/node-restful-api`);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
